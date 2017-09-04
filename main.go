@@ -8,6 +8,7 @@ import (
 func main() {
 	db := getDatabase(os.Getenv("DATABASE_URL"))
 	if os.Getenv("MIGRATE_DB") == "true" {
+		fmt.Println("Migrating DB...")
 		migrate(db)
 	}
 	defer db.Close()
