@@ -1,1 +1,1 @@
-web: go-api-example
+web: loadtest-go-api
