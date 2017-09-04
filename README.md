@@ -19,6 +19,7 @@ Source code for my [contrived load test](https://twitter.com/grales/status/90468
 1. `go get github.com/ericnograles/loadtest-go-api`
 1. `cd $GOPATH/src/github.com/ericnograles/loadtest-go-api`
 1.  `govendor sync`
-1. `go build && DATABASE_URL=postgres://postgres@127.0.0.1:5432/hello_go PORT=8080 ./loadtest-go-api`
-    * **Note**: Swap out the value for DATABASE_URL for the proper local database on your setup. Be sure to create a new database.
-    * **Note**: Swap out the value for PORT with a proper port you'd like to use locally for the Web API.
+1. `go build && DATABASE_URL=postgres://postgres@127.0.0.1:5432/hello_go PORT=8080 LOADER_IO_TOKEN=some_loaderio_token ./loadtest-go-api`
+    * **DATABASE_URL**: A valid Postgres URI of your local setup, including username and optionally password
+    * **PORT**: Port on which to run this Web API
+    * **LOADER_IO_TOKEN**: Your loader.io verification token
