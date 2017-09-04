@@ -1,7 +1,9 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
+	"os"
 
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
@@ -10,6 +12,9 @@ import (
 func initializeRoutes(db *gorm.DB) *gin.Engine {
 	router := gin.Default()
 	router.GET("/hello", hello(db))
+	router.GET(fmt.Sprintf("/%v", os.Getenv("LOADER_IO_TOKEN")), func(c *gin.Context) {
+		c.String(http.StatusOK, os.Getenv("LOADER_IO_TOKEN"))
+	})
 	return router
 }
 
