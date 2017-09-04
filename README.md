@@ -6,7 +6,7 @@ Source code for my [contrived load test](https://twitter.com/grales/status/90468
 
 ## Prerequisites
 
-1. [GoLang 1.9+](https://golang.org/dl/)
+1. [GoLang 1.8+](https://golang.org/dl/)
 1. [Delve](https://github.com/derekparker/delve)
 1. [Govendor](https://github.com/kardianos/govendor)
 1. (Optional, Recommended) [Docker](https://www.docker.com/)
