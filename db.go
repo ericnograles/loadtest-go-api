@@ -45,6 +45,6 @@ func getDatabase(databaseSourceURL string) *gorm.DB {
 func migrate(db *gorm.DB) {
 	db.DropTableIfExists(&User{})
 	db.AutoMigrate(&User{})
-	db.Create(&User{FirstName: "Eric", LastName: "Nograles", EmailAddress: "grales@gmail.com"})
-	db.Create(&User{FirstName: "Eric", LastName: "Nograles2", EmailAddress: "grales@gmail.com"})
+	db.Create(&User{FirstName: "Test", LastName: "User", EmailAddress: "test@test.com"})
+	db.Create(&User{FirstName: "Test", LastName: "User2", EmailAddress: "test2@test.com"})
 }

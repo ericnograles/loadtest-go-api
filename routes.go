@@ -10,10 +10,6 @@ import (
 func initializeRoutes(db *gorm.DB) *gin.Engine {
 	router := gin.Default()
 	router.GET("/hello", hello(db))
-	router.GET("/loaderio-c7b3086d5fba14d88dff2c652577b001.txt", func(c *gin.Context) {
-		c.String(http.StatusOK, "loaderio-c7b3086d5fba14d88dff2c652577b001")
-	})
-
 	return router
 }
 
