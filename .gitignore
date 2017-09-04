@@ -4,6 +4,7 @@
 *.so
 *.dylib
 debug*
+loadtest-go-api*
 
 # Test binary, build with `go test -c`
 *.test
@@ -15,3 +16,4 @@ debug*
 .glide/
 vendor/*
 !vendor/vendor.json
+./loadtest-go-api
