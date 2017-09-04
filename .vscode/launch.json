@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "API",
+      "type": "go",
+      "request": "launch",
+      "mode": "debug",
+      "remotePath": "",
+      "port": 2345,
+      "host": "127.0.0.1",
+      "program": "${workspaceRoot}",
+      "env": {
+        "DATABASE_URL": "postgres://postgres@127.0.0.1:61001/hello_go",
+        "PORT": "8080"
+      },
+      "args": [],
+      "showLog": true
+    }
+  ]
+}
