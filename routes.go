@@ -15,7 +15,7 @@ func initializeRoutes(db *gorm.DB) *gin.Engine {
 
 func hello(db *gorm.DB) func(c *gin.Context) {
 	return func(c *gin.Context) {
-		query := db.Where("email_address in (?)", []string{"grales@gmail.com"}).Find(&[]User{})
+		query := db.Where("email_address in (?)", []string{"test@test.com"}).Find(&[]User{})
 		c.JSON(http.StatusOK, query.Value)
 	}
 }

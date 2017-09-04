@@ -12,7 +12,8 @@
       "program": "${workspaceRoot}",
       "env": {
         "DATABASE_URL": "postgres://postgres@127.0.0.1:61001/hello_go",
-        "PORT": "8080"
+        "PORT": "8080",
+        "MIGRATE_DB": "true"
       },
       "args": [],
       "showLog": true
